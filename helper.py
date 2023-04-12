@@ -6,6 +6,8 @@ def helper():
                     prog='ABCToolbox',
                     description='ABCToolbox')
     parser.add_argument('boxname', type=str)
+    parser.add_argument('-i', type=str)
+    parser.add_argument('-o', type=str)
     parser = image_helper(parser)
     args = parser.parse_args()
     return args
