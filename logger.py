@@ -12,7 +12,7 @@ def Singleton(cls):
 
 @Singleton
 class Logger:
-    def __init__(self, log_path:str)->None:    
+    def __init__(self)->None:    
         self.log_colors_config = {
             'DEBUG': 'white',  
             'INFO': 'green',
