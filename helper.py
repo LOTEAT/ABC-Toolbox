@@ -1,14 +1,19 @@
 import argparse
 from images import image_helper
+from files import file_helper
 
 def helper():
     parser = argparse.ArgumentParser(
                     prog='ABCToolbox',
                     description='ABCToolbox')
-    parser.add_argument('boxname', type=str)
-    parser.add_argument('-i', type=str)
-    parser.add_argument('-o', type=str)
-    parser = image_helper(parser)
+    subparser = parser.add_subparsers(help='for different toolbox')
+    
+    image_helper(subparser)
+    
+
+    # parser = file_helper(parser)
+    # parser = image_helper(parser)
     args = parser.parse_args()
+    print(args)
     return args
     
