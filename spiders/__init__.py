@@ -1,4 +1,4 @@
-from .helper import image_helper
-from .image_box import ImageBox
+from .helper import spider_helper
+from .spider_box import SpiderBox
 
-__all__ = ['image_helper', 'ImageBox', 'collect_images']
+__all__ = ['spider_helper', 'SpiderBox']

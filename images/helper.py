@@ -1,4 +1,3 @@
-import argparse
 from .image_box import ImageBox
 
 def image_helper(parser):

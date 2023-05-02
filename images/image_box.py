@@ -3,7 +3,7 @@ from glob import glob
 import os
 import os.path as osp
 from .compress import _img_compress
-from .utils import collect_images
+from .utils import _collect_images
 
 
 class ImageBox(Box):
@@ -34,7 +34,7 @@ class ImageBox(Box):
             os.makedirs(dir_name, exist_ok=True)
             self._img_compress(in_path, out_path, ratio)
         else:
-            images = collect_images(in_path)
+            images = _collect_images(in_path)
             for img_path in images:
                 _, file_name = osp.split(img_path)
                 out_img_path = osp.join(out_path, file_name)

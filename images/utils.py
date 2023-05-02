@@ -1,9 +1,5 @@
-from glob import glob
-import os.path as osp
+from files import FileBox
 
-def collect_images(path):
-    images = []
-    images.extend(glob(osp.join(path, "**", "*.{}".format('jpeg')), recursive=True))
-    images.extend(glob(osp.join(path, "**", "*.{}".format('png')), recursive=True))
-    images.extend(glob(osp.join(path, "**", "*.{}".format('jpg')), recursive=True))
-    return images
+def _collect_images(path):
+    img_exts = ['jpeg', 'jpg', 'png']
+    return FileBox(path, img_exts)
